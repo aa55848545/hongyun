@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>定制-结算</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/orderbalance.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <p>定金交付</p>
+    <em><em>
+        <a href="collect.html"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+    </em></em>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 底部栏开始 -->
+<div class="footer">
+    <a href="service.html" class="kefu"></a>
+    <a href="shoppingbag.html" class="buy"></a>
+    <a href="#" class="add"></a>
+    <a href="#" class="set"></a>
+</div>
+<!-- 底部栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <div class="cloth">
+        <div class="cloth-img"></div>
+        <div class="cloth-desc">
+            <h3>【 陶玉梅·百年花开 】</h3>
+            <em></em>
+            <p>长款月牙袖</p>
+            <p>香云纱群芳紫桔梗苏绣</p>
+            <p>中式复古连襟旗袍</p>
+        </div>
+        <div class="cloth-fina"></div>
+        <p>估价：<span>￥2,397</span></p>
+        <span></span>
+    </div>
+</div>
+<div class="money">
+    <p>定金：<span>￥799</span></p>
+    <span>定金为总价30%</span>
+</div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    $(function () {
+        $(".header span").click(function () {
+            history.back();
+        });
+        $(".header>em").click(function () {
+            $(".header>em").toggleClass("on");
+        });
+    });
+</script>
+</body>
+</html>

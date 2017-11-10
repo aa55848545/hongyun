@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@import url(../css/common.css);
+body {
+  padding-bottom: 2.3rem;
+}
+
+/* 顶部开始 */
+.header {
+  position: fixed;
+  top: 0.4rem;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 0.8rem;
+  text-align: center;
+  font-size: 0.36rem;
+  line-height: 0.8rem;
+  font-weight: bold;
+  margin-top: 0;
+  background-color: #fcf5eb;
+}
+.header > em {
+  position: absolute;
+  top: 0;
+  right: 0.48rem;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.header > em a {
+  font-style: normal;
+  color: #333333;
+  font-size: 0.3rem;
+  font-weight: normal;
+  line-height: 0.8rem;
+}
+
+/* 主体部分开始 */
+.content {
+  width: 100%;
+  margin-top: 1.4rem;
+}
+.content .cont-img {
+  width: 100%;
+  font-size: 0;
+  margin-bottom: 0.1rem;
+}
+.content .cont-img span {
+  position: absolute;
+  top: 0.99rem;
+  left: 0.18rem;
+  z-index: 9;
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-image: url("../img/shoppingbag/circle.png");
+  background-repeat: no-repeat;
+  background-size: 0.28rem 0.28rem;
+  background-position: center center;
+}
+.content .cont-img span.on {
+  background-image: url("../img/shoppingbag/circle choose.png");
+}
+.content .cont-img img {
+  width: 100%;
+}
+.content .cont-del {
+  width: 1.2rem;
+  padding-top: 0.11rem;
+}
+.content .cont-del button {
+  width: 1.2rem;
+  height: 2.82rem;
+  background-image: url("../img/shoppingbag/del.png");
+  background-repeat: no-repeat;
+  background-size: 1.2rem 2.82rem;
+}
+
+.end {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 1.3rem;
+  background: #fcf5eb;
+  border-top: 1px solid #d6d4d1;
+  border-bottom: 1px solid #d6d4d1;
+  font-size: 0.24rem;
+}
+.end > span {
+  position: absolute;
+  top: 0.32rem;
+  left: 0.13rem;
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  padding-top: 0.34rem;
+  text-align: center;
+  line-height: 0.46rem;
+  background-image: url("../img/shoppingbag/circle.png");
+  background-repeat: no-repeat;
+  background-size: 0.28rem 0.28rem;
+  background-position: center 0.06rem;
+}
+.end > span.on {
+  background-image: url("../img/shoppingbag/circle choose.png");
+}
+.end h3 {
+  position: absolute;
+  top: 0.32rem;
+  right: 2.6rem;
+  font-size: 0.36rem;
+  font-weight: normal;
+  color: #333333;
+}
+.end h3 span {
+  font-size: 0.38rem;
+  color: #a31515;
+  font-weight: bold;
+}
+.end p {
+  position: absolute;
+  top: 0.81rem;
+  right: 2.6rem;
+  font-size: 0.22rem;
+  font-weight: normal;
+  color: #666666;
+}
+.end a {
+  position: absolute;
+  top: 0.12rem;
+  right: 0;
+  display: block;
+  width: 2.4rem;
+  height: 1.04rem;
+  background-image: url("../img/shoppingbag/balance.png");
+  background-repeat: no-repeat;
+  background-size: 2.4rem 1.04rem;
+}
+
+/*# sourceMappingURL=shoppingbag.css.map */

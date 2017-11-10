@@ -1,0 +1,157 @@
+@charset "UTF-8";
+@import url(../css/order.css);
+/* swiper样式修改 */
+.swiper-pagination-bullet {
+  width: 0.16rem;
+  height: 0.16rem;
+  background-color: transparent;
+  background-image: url("../img/details/circle@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-pagination-bullet-active {
+  background-image: url("../img/details/circlechoose@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.myimg {
+  font-size: 0;
+}
+
+.status {
+  background: none;
+}
+
+.header {
+  position: fixed;
+  top: 0.4rem;
+  left: 0;
+  z-index: 99;
+  margin-top: 0;
+  width: 100%;
+  height: 0.8rem;
+  text-align: center;
+  font-size: 0.36rem;
+  line-height: 0.8rem;
+  font-weight: bold;
+  background: transparent;
+}
+.header span {
+  position: absolute;
+  top: 0;
+  left: 0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url("../img/order/order-home/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 0.2rem 0.36rem;
+  background-position: center center;
+}
+.header > em {
+  position: absolute;
+  top: 0;
+  right: 0.48rem;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url("../img/order/order-balance/more@1x.png");
+  background-repeat: no-repeat;
+  background-size: 0.36rem 0.36rem;
+  background-position: center center;
+}
+.header > em.on em {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 0.22rem;
+  display: block;
+  width: 1.9rem;
+  height: 2.58rem;
+  background-image: url("../img/order/order-balance/more2@1x.png");
+  background-repeat: no-repeat;
+  background-size: 1.9rem 2.58rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 1rem;
+  background: #fffcf8;
+}
+.footer a {
+  display: inline-block;
+  height: 1rem;
+}
+.footer a.kefu {
+  left: 0.43rem;
+  top: 0;
+  width: 1rem;
+  background-image: url("../img/order/order-balance/kefu.png");
+  background-repeat: no-repeat;
+  background-size: 0.65rem 0.8rem;
+  background-position: center center;
+}
+.footer a.buy {
+  left: 1.7rem;
+  top: 0;
+  width: 1rem;
+  background-image: url("../img/order/order-balance/shopping bag.png");
+  background-repeat: no-repeat;
+  background-size: 0.64rem 0.7rem;
+  background-position: center center;
+}
+.footer a.add {
+  left: auto;
+  right: 2.15rem;
+  top: 0;
+  width: 2.15rem;
+  background-image: url("../img/order/order-balance/addtobag@1x.png");
+  background-repeat: no-repeat;
+  background-size: 2.15rem 1rem;
+  background-position: center center;
+}
+.footer a.set {
+  left: auto;
+  right: 0;
+  top: 0;
+  width: 2.15rem;
+  background-image: url("../img/order/order-balance/settlement@1x.png");
+  background-repeat: no-repeat;
+  background-size: 2.15rem 1rem;
+  background-position: center center;
+}
+
+.content {
+  width: 100%;
+  margin-top: 0;
+}
+.content .cont-name {
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+}
+.content .cont-name img {
+  display: block;
+  width: 100%;
+}
+.content .cont-all {
+  width: 100%;
+}
+.content .cont-all img {
+  width: 100%;
+  margin-top: -9.56rem;
+}
+
+/*# sourceMappingURL=details.css.map */

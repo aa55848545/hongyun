@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import "../css/common.css";
+.cont-left{
+  float: left;
+  position: fixed;
+  top: 1.2rem;
+  left: 0rem;
+  z-index: 10;
+  width: 1.53rem;
+  li{
+    width: 1.53rem;
+    height: 1rem;
+    a{
+      display: block;
+      width: 1.53rem;
+      height: 1rem;
+      line-height: 1rem;
+      font-size: 0.28rem;
+      color: #333333;
+      text-align: center;
+      &.on{
+        background-color: #fffcf8;
+      }
+    }
+  }
+}// .cont-left
+/* 主体部分开始 */
+.content{
+  width: 100%;
+
+  .cont-right{
+    float: right;
+    width: 5.97rem;
+    padding: 0.11rem;
+    background-color: #fffcf8;
+    font-size: 0;
+    .cont-right-banner{
+      width: 100%;
+      margin-bottom: 0.2rem;
+      img{
+        width: 100%;
+      }
+    }
+    .cont-right-pic{
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 0.15rem;
+      .pic-left{
+        float: left;
+        width: 2.8rem;
+        img{
+          width: 100%;
+        }
+      }
+      .pic-right{
+        float: right;
+        width: 2.8rem;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+

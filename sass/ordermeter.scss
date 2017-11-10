@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@import "../css/order.css";
+
+.footer{
+  background-image: url("../img/order/order-meter/submit.png");
+}
+.content{
+  .order-flow{
+    width: 6.2rem;
+  }
+  .order-enjoy{
+    width: 100%;
+    .enjoy-size{
+      font-size: 0.32rem;
+      color: #333333;
+      padding-left: 0.65rem;
+      margin-bottom: 0.16rem;
+      background: {
+        image: url("../img/order/order-meter/line.png");
+        repeat: no-repeat;
+        size: 100% 1px;
+        position: bottom;
+      };
+      li{
+        height: 1.27rem;
+        line-height: 1.27rem;
+        a{
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          color: #333333;
+          overflow: hidden;
+          background: {
+            image: url("../img/order/order-meter/line.png");
+            repeat: no-repeat;
+            size: 100% 1px;
+            position: bottom;
+          };
+          .left{
+            float: left;
+          }
+          .right{
+            float: right;
+            margin-right: 0.65rem;
+            padding-right: 0.55rem;
+            background: {
+              image: url("../img/order/order-meter/arrow right.png");
+              repeat: no-repeat;
+              size: 0.16rem 0.28rem;
+              position: right center;
+            }
+          }
+          &.non{
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}

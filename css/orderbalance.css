@@ -1,0 +1,191 @@
+@import url(../css/order.css);
+body {
+  padding-bottom: 1rem;
+}
+
+.header > em {
+  position: absolute;
+  top: 0;
+  right: 0.48rem;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url("../img/order/order-balance/more@1x.png");
+  background-repeat: no-repeat;
+  background-size: 0.36rem 0.36rem;
+  background-position: center center;
+}
+.header > em.on em {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 0.22rem;
+  display: block;
+  width: 1.9rem;
+  height: 2.58rem;
+  padding-top: 0.17rem;
+  background-image: url("../img/order/order-balance/more2@1x.png");
+  background-repeat: no-repeat;
+  background-size: 1.9rem 2.58rem;
+}
+.header > em.on em a {
+  display: block;
+  width: 100%;
+  height: 0.8rem;
+}
+
+.content {
+  padding: 0.25rem 0 0.75rem;
+  background-image: url("../img/order/order-balance/background@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content .cloth {
+  width: 6.1rem;
+  height: 8rem;
+  margin: 0 auto;
+  background-image: url("../img/order/order-balance/rectangle@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content .cloth .cloth-img {
+  position: absolute;
+  top: 0.4rem;
+  left: 1rem;
+  width: 1.32rem;
+  height: 4.04rem;
+  background-image: url("../img/order/order-balance/cloth@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+.content .cloth .cloth-desc {
+  position: absolute;
+  top: 1.9rem;
+  right: 1.1rem;
+}
+.content .cloth .cloth-desc h3 {
+  font-size: 0.26rem;
+  font-weight: normal;
+  margin-bottom: 0.22rem;
+}
+.content .cloth .cloth-desc em {
+  display: block;
+  width: 1.24rem;
+  height: 1px;
+  background-color: #333333;
+  margin-bottom: 0.33rem;
+}
+.content .cloth .cloth-desc p {
+  font-size: 0.24rem;
+  color: #333333;
+}
+.content .cloth .cloth-fina {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  width: 4.6rem;
+  height: 2rem;
+  margin-left: -2.3rem;
+  background-image: url("../img/order/order-balance/information@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content .cloth > p {
+  position: absolute;
+  bottom: 0.65rem;
+  right: 0.75rem;
+  font-size: 0.36rem;
+  color: #333333;
+}
+.content .cloth > p span {
+  font-size: 0.4rem;
+  color: #a31515;
+}
+.content .cloth > span {
+  position: absolute;
+  bottom: 0.1rem;
+  right: 0.1rem;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url("../img/order/order-balance/question.png");
+  background-repeat: no-repeat;
+  background-size: 0.3rem 0.31rem;
+  background-position: center center;
+}
+
+.money {
+  padding-right: 0.7rem;
+  text-align: right;
+}
+.money p {
+  font-size: 0.5rem;
+  color: #333333;
+}
+.money p span {
+  font-size: 0.52rem;
+  color: #a31515;
+  font-weight: bold;
+}
+.money > span {
+  position: absolute;
+  bottom: -0.3rem;
+  right: 2.4rem;
+  font-size: 0.24rem;
+  color: #333333;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 1rem;
+  background: #fffcf8;
+}
+.footer a {
+  position: absolute;
+  display: inline-block;
+  height: 1rem;
+}
+.footer a.kefu {
+  left: 0.43rem;
+  top: 0;
+  width: 1rem;
+  background-image: url("../img/order/order-balance/kefu.png");
+  background-repeat: no-repeat;
+  background-size: 0.65rem 0.8rem;
+  background-position: center center;
+}
+.footer a.buy {
+  left: 1.7rem;
+  top: 0;
+  width: 1rem;
+  background-image: url("../img/order/order-balance/shopping bag.png");
+  background-repeat: no-repeat;
+  background-size: 0.64rem 0.7rem;
+  background-position: center center;
+}
+.footer a.add {
+  left: auto;
+  right: 2.15rem;
+  top: 0;
+  width: 2.15rem;
+  background-image: url("../img/order/order-balance/addtobag@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+.footer a.set {
+  left: auto;
+  right: 0;
+  top: 0;
+  width: 2.15rem;
+  background-image: url("../img/order/order-balance/settlement@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+/*# sourceMappingURL=orderbalance.css.map */

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>分类</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/classify.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <nav>
+        <button type="button" class="btn-menu"></button>
+        <input type="text" placeholder="搜索：香云纱">
+        <span></span>
+    </nav>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 底部栏开始 -->
+<div class="footer">
+    <a href="home.html" class="footer-home left"></a>
+    <a href="javascript:;" class="footer-classify cen on"></a>
+    <a href="order-home.html" class="footer-custom"></a>
+    <a href="shoppingbag.html" class="footer-shopping"></a>
+    <a href="my.html" class="footer-my non right"></a>
+</div>
+<!-- 底部栏结束 -->
+
+<!-- 左侧菜单栏开始 -->
+<div class="menu">
+    <div class="menu-user">
+        <div class="menu-user-left"></div>
+        <div class="menu-user-right">
+            <p>十里浅秋</p>
+            <img src="img/home/menu/VIOP.png"/>
+        </div>
+    </div>
+    <div class="menu-nav">
+        <ul>
+            <li><a href="#">红韵定制</a></li>
+            <li><a href="#">名品旗袍</a></li>
+            <li><a href="#">红女郎推荐</a></li>
+            <li><a href="#">收藏</a></li>
+            <li><a href="#">关于红韵</a></li>
+        </ul>
+    </div>
+    <div class="menu-btm">
+        <a href="#" class="menu-btm1"></a>
+        <a href="#" class="menu-btm2"></a>
+        <a href="#" class="menu-btm3"></a>
+    </div>
+</div>
+<!-- 左侧菜单栏结束 -->
+
+<div class="menu-after"></div>
+<div class="cont-left">
+    <ul>
+        <li><a href="#">品牌</a></li>
+        <li><a href="#">推荐</a></li>
+        <li><a href="#" class="on">面料</a></li>
+        <li><a href="#">主题</a></li>
+        <li><a href="#">名品</a></li>
+        <li><a href="#">搭配</a></li>
+        <li><a href="#">私人售卖</a></li>
+    </ul>
+</div>
+<!-- 主体部分开始 -->
+<div class="content">
+
+    <div class="cont-right">
+        <div class="cont-right-banner">
+            <img src="img/classify/banner.png"/>
+            <span style="position: absolute; bottom: 0; left: 0; display: block; width: 100%; height: 0.4rem; background: rgba(255,255,255,.5); font-size: 0.3rem; line-height: 0.4rem; text-align: center; color: #999999;">面料</span>
+        </div>
+        <div class="cont-right-pic">
+            <div class="pic-left">
+                <img src="img/classify/1.png"/>
+            </div>
+            <div class="pic-right">
+                <img src="img/classify/2.png"/>
+            </div>
+        </div>
+        <div class="cont-right-pic">
+            <div class="pic-left">
+                <img src="img/classify/3.png"/>
+            </div>
+            <div class="pic-right">
+                <img src="img/classify/4.png"/>
+            </div>
+        </div>
+
+        <div class="cont-right-pic">
+            <div class="pic-left">
+                <img src="img/classify/1.png"/>
+            </div>
+            <div class="pic-right">
+                <img src="img/classify/2.png"/>
+            </div>
+        </div>
+        <div class="cont-right-pic">
+            <div class="pic-left">
+                <img src="img/classify/3.png"/>
+            </div>
+            <div class="pic-right">
+                <img src="img/classify/4.png"/>
+            </div>
+        </div>
+
+        <div class="cont-right-pic">
+            <div class="pic-left">
+                <img src="img/classify/1.png"/>
+            </div>
+            <div class="pic-right">
+                <img src="img/classify/2.png"/>
+            </div>
+        </div>
+        <div class="cont-right-pic">
+            <div class="pic-left">
+                <img src="img/classify/3.png"/>
+            </div>
+            <div class="pic-right">
+                <img src="img/classify/4.png"/>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/auto-size.js"></script>
+<script src="js/user-menu.js"></script>
+<script>
+    $(function () {
+        $(".btn-menu").click(function () {
+            $(".content,.status,nav,.footer,.menu,.cont-left").css({transform:"translateX(5.9rem)",transition:"transform 0.3s"});
+            $(".menu-after").fadeIn();
+            $("body").bind("touchmove",function(event){event.preventDefault();});
+            touchMove();
+        });
+        $(".menu-after").click(function () {
+            $(".content,.status,nav,.footer,.menu,.cont-left").css({transform:"none",transition:"transform 0.3s"});
+            $(".menu-after").fadeOut();
+            $("body").unbind("touchmove");
+        });
+
+        function touchMove(){
+            var x1=0;
+            $(document).on("touchstart",function(e){
+                x1=e.changedTouches[0].pageX;
+            });
+            $(document).on("touchend",function(e){
+                var x2=e.changedTouches[0].pageX;
+                if(x1-x2>50){
+                    $(".content,.status,nav,.footer,.menu,.cont-left").css({transform:"translateX(0rem)",transition:"transform 0.3s"});
+                    $(".menu-after").fadeOut();
+                    $("body").unbind("touchmove");
+                }
+            });
+        }
+
+        $(".cont-left li a").click(function () {
+            $(".cont-left li a").removeClass("on");
+            $(this).addClass("on");
+            console.log($(this).text());
+            $(".cont-right .cont-right-banner span").text($(this).text());
+            $(".cont-right .cont-right-banner").css("margin-bottom","2rem");
+            $(".cont-right .cont-right-banner").animate({marginBottom:"0.2rem"},300);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@import url(../css/order.css);
+.footer {
+  background-image: url("../img/order/order-meter/submit.png");
+}
+
+.content .order-flow {
+  width: 6.2rem;
+}
+.content .order-enjoy {
+  width: 100%;
+}
+.content .order-enjoy .enjoy-size {
+  font-size: 0.32rem;
+  color: #333333;
+  padding-left: 0.65rem;
+  margin-bottom: 0.16rem;
+  background-image: url("../img/order/order-meter/line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: bottom;
+}
+.content .order-enjoy .enjoy-size li {
+  height: 1.27rem;
+  line-height: 1.27rem;
+}
+.content .order-enjoy .enjoy-size li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+  overflow: hidden;
+  background-image: url("../img/order/order-meter/line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: bottom;
+}
+.content .order-enjoy .enjoy-size li a .left {
+  float: left;
+}
+.content .order-enjoy .enjoy-size li a .right {
+  float: right;
+  margin-right: 0.65rem;
+  padding-right: 0.55rem;
+  background-image: url("../img/order/order-meter/arrow right.png");
+  background-repeat: no-repeat;
+  background-size: 0.16rem 0.28rem;
+  background-position: right center;
+}
+.content .order-enjoy .enjoy-size li a.non {
+  background: none;
+}
+
+/*# sourceMappingURL=ordermeter.css.map */

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>登录</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <p>忘记密码</p>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <div class="cont-content">
+        <p>手机号</p>
+        <input type="tel" maxlength="11" placeholder="输入数字" class="ipt-txt">
+        <p>密码</p>
+        <input type="password" maxlength="26" placeholder="输入密码" class="ipt-pwd">
+        <p class="p1"><span class=""></span>显示密码</p>
+        <span></span>
+    </div>
+</div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    $(function () {
+        $(".header span").click(function () {
+            history.back();
+        });
+
+        var userTel=false;
+        var userPwd=false;
+
+        $(".ipt-txt").bind("input propertychange",function () {
+            var text1="";
+            text1=$(this).val();
+            if(/^1\d{10}$/.test(text1)){
+                $(this).css("color","#a31515");
+                userTel=true;
+                if(userPwd){
+                    $(".content .cont-content>span").addClass("on");
+                }
+            }else{
+                userTel=false;
+                $(".content .cont-content>span").removeClass("on");
+                $(this).css("color","blue");
+            }
+
+        });
+
+        $(".ipt-pwd").bind("input propertychange",function () {
+            if(/^(\w){6,20}$/.exec($(".ipt-pwd").val())){
+                userPwd=true;
+                if(userTel){
+                    $(".content .cont-content>span").addClass("on");
+                }
+            }else{
+                userPwd=false;
+                $(".content .cont-content>span").removeClass("on");
+                console.log("请输入6~20位的密码,只包含数字字母下划线!");
+            }
+        });
+
+        $(".ipt-txt").on("keydown",function (e) {
+            if(e.keyCode==13){
+                $(".ipt-pwd")[0].focus();
+            }
+        });
+
+        $(".ipt-pwd").on("keydown",function (e) {
+            if(e.keyCode==13){
+                $(".cont-content > span").click();
+            }
+        });
+
+        $(".p1").click(function () {
+            $(".p1 span").toggleClass("on");
+            if($(".p1 span").hasClass("on")){
+                $(".ipt-pwd").attr("type","text");
+            }else{
+                $(".ipt-pwd").attr("type","password");
+            }
+        });
+        
+        $(".cont-content > span").click(function () {
+            if($(".cont-content > span").hasClass("on")){
+                if($(".ipt-txt").val()==localStorage.tel && $(".ipt-pwd").val()==localStorage.pwd){
+                    myLocalStorage();
+                }else{
+                    alert("对你起，您输入的账号密码有误，请重新输入！");
+                }
+            }else{
+                if(userTel==false){
+                    alert("请输入正确的手机号");
+                }else if(userPwd==false){
+                    alert("请输入6~20位的密码,只包含数字字母下划线");
+                }
+            }
+        });
+    });
+
+    function myLocalStorage() {
+        if(!window.localStorage){
+            alert("浏览器不支持localstorage");
+            return false;
+        }else{
+            //主逻辑业务
+            if(localStorage.tel==""&&localStorage.pwd==""){
+                console.log("未输入账号密码");
+            }else{
+                console.log("已输入账号密码");
+                window.location="home.html";
+            }
+        }
+    }
+//    localStorage.tel="";
+//    localStorage.pwd="";
+//    console.log(localStorage.tel);
+//    console.log(localStorage.pwd);
+//    myLocalStorage();
+</script>
+</body>
+</html>

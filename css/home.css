@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url(../css/common.css);
+/* swiper样式修改 */
+.swiper-pagination-bullet {
+  width: 0.12rem;
+  height: 0.12rem;
+  background-image: url("../img/home/banner/circle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-pagination-bullet-active {
+  background-image: url("../img/home/banner/circle choose.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 主体部分开始 */
+.content {
+  width: 100%;
+}
+.content .cont-banner {
+  width: 100%;
+}
+.content .cont-banner img {
+  width: 100%;
+  height: 100%;
+}
+.content .cont-new {
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+}
+.content .cont-new div {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.5rem;
+  margin: 0 0.19rem;
+}
+.content .cont-new div img {
+  width: auto;
+  height: 100%;
+}
+.content .cont-free {
+  margin: 0.58rem 0.5rem 0.72rem;
+  font-size: 0;
+  padding: 0.17rem;
+  background-image: url("../img/home/new/rentangle.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content .cont-free img {
+  width: 1.98rem;
+  height: 1.84rem;
+  margin-right: 0.1rem;
+}
+.content .cont-free img.non {
+  margin-right: 0px;
+}
+.content .cont-bpic {
+  width: 100%;
+}
+.content .cont-bpic img {
+  width: 100%;
+}
+.content .cont-like {
+  padding: 0 0.5rem;
+  width: 2.7rem;
+  height: 1px;
+  margin: 0 auto 0.34rem;
+  background-color: #333333;
+}
+.content .cont-like p {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -0.85rem;
+  margin-top: -0.155rem;
+  padding: 0 0.13rem;
+  font-size: 0.24rem;
+  color: #333333;
+  background-color: #fcf5eb;
+}
+.content .cont-spic {
+  width: 6.5rem;
+  margin: 0 auto 0.45rem;
+  overflow: hidden;
+}
+.content .cont-spic .cont-spic-left {
+  float: left;
+}
+.content .cont-spic .cont-spic-right {
+  float: right;
+}
+.content .cont-spic .cont-spic-image {
+  width: 3.2rem;
+  height: 5.15rem;
+}
+.content .cont-spic .cont-spic-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=home.css.map */

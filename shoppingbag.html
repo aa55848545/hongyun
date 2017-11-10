@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>购物袋</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/shoppingbag.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <p>购物袋</p>
+    <em><em><a href="#">编辑</a></em></em>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 底部栏开始 -->
+<div class="footer">
+    <a href="home.html" class="footer-home left"></a>
+    <a href="classify.html" class="footer-classify cen"></a>
+    <a href="order-home.html" class="footer-custom"></a>
+    <a href="javascript:;" class="footer-shopping on"></a>
+    <a href="my.html" class="footer-my non right"></a>
+</div>
+<!-- 底部栏结束 -->
+
+<!-- 结算开始 -->
+<div class="end">
+    <span>全选</span>
+    <h3>总计：<span>￥2,379</span></h3>
+    <p>(<span>1</span>件)顺丰包邮</p>
+    <a href=""></a>
+</div>
+<!-- 结算结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <div class="swiper-container swiper-container1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="cont-img">
+                    <span></span>
+                    <img src="img/shoppingbag/1.png" data-money="2379"/>
+                </div>
+            </div>
+            <div class="cont-del swiper-slide">
+                <button type="button" class="btn-del"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper-container swiper-container2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="cont-img">
+                    <span class="on"></span>
+                    <img src="img/shoppingbag/1.png" data-money="2379"/>
+                </div>
+            </div>
+            <div class="cont-del swiper-slide">
+                <button type="button" class="btn-del"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper-container swiper-container3">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="cont-img">
+                    <span></span>
+                    <img src="img/shoppingbag/1.png" data-money="2379"/>
+                </div>
+            </div>
+            <div class="cont-del swiper-slide">
+                <button type="button" class="btn-del"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    var mySwiper1=new Swiper(".swiper-container1",{
+        direction: "horizontal",
+        resistanceRatio : 0,
+        slidesPerView: "auto",
+    });
+
+    var mySwiper2=new Swiper(".swiper-container2",{
+        direction: "horizontal",
+        resistanceRatio : 0,
+        slidesPerView: "auto",
+    });
+
+    var mySwiper3=new Swiper(".swiper-container3",{
+        direction: "horizontal",
+        resistanceRatio : 0,
+        slidesPerView: "auto",
+    });
+
+    $(function () {
+        $(".btn-del").click(function () {
+            $(this).parent().parent().parent().remove();
+            if($(".cont-img span").length==$(".cont-img span.on").length){
+                $(".end span").addClass("on");
+            }else{
+                $(".end span").removeClass("on");
+            }
+            getMoney();
+        });
+        
+        $(".header>em").on("click",function () {
+            var tran=$(this).find("a").text();
+            if(tran=="编辑"){
+                $(this).find("a").text("返回");
+                mySwiper1.slideTo(1);
+                mySwiper2.slideTo(1);
+                mySwiper3.slideTo(1);
+            }else{
+                $(this).find("a").text("编辑");
+                mySwiper1.slideTo(0);
+                mySwiper2.slideTo(0);
+                mySwiper3.slideTo(0);
+            }
+        });
+        
+        $(".cont-img span").click(function () {
+            $(this).toggleClass("on");
+            if($(".cont-img span").length==$(".cont-img span.on").length){
+                $(".end span").addClass("on");
+            }else{
+                $(".end span").removeClass("on");
+            }
+            getMoney();
+        });
+
+        $(".end span").click(function () {
+            $(".end span").toggleClass("on");
+            if($(".end span").hasClass("on")){
+                $(".cont-img span").addClass("on");
+                getMoney();
+            }else{
+                $(".cont-img span").removeClass("on");
+                getMoney();
+            }
+        });
+
+        $(".cont-img img").on("click",function () {
+            localStorage.details=0;
+            window.location="details.html";
+        });
+
+        touchMove();
+    });
+
+    function touchMove(){
+        var x1=0;
+        $(".swiper-container").on("touchstart",function(e){
+            x1=e.changedTouches[0].pageX;
+        });
+        $(".swiper-container").on("touchend",function(e){
+            var x2=e.changedTouches[0].pageX;
+            if(x1-x2>20){
+                $(".header>em").find("a").text("编辑");
+                var index = $(".swiper-container").index(this);
+                console.log(index);
+                $(".swiper-wrapper").css("transform","translate3d(0px, 0px, 0px)");
+                $(".swiper-wrapper:eq("+index+")").css("transform","translate3d(-1.2rem, 0px, 0px)");
+            }else if(x1-x2<0){
+                $(".header>em").find("a").text("编辑");
+            }
+        });
+    }
+
+    function getMoney() {
+        var num=0;
+        var sl=0;
+        for(var i=0;i<$(".content .cont-img span").length;i++){
+            if($(".content .cont-img span:eq("+i+")").hasClass("on")){
+                num+=Number($(".content .cont-img span:eq("+i+")").next().attr("data-money"));
+                sl++;
+            }
+        }
+        num=fmoney(num,0);
+        $(".end h3 span").text('￥'+num);
+        $(".end p span").text(sl);
+    }
+
+    function fmoney(s, n)
+    {
+        n = n > 0 && n <= 20 ? n : 2;
+        s = parseFloat((s + "").replace(/[^\d\.-]/g, "")).toFixed(n) + "";
+        var l = s.split(".")[0].split("").reverse();
+//            r = s.split(".")[1];
+        var t = "";
+        for(var i = 0; i < l.length; i ++ )
+        {
+            t += l[i] + ((i + 1) % 3 == 0 && (i + 1) != l.length ? "," : "");
+        }
+//        return t.split("").reverse().join("") + "." + r;
+        return t.split("").reverse().join("");
+    }
+</script>
+</body>
+</html>

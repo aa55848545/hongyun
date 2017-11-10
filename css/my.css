@@ -1,0 +1,155 @@
+@import url(../css/common.css);
+.status {
+  background-color: transparent;
+}
+
+.content {
+  width: 100%;
+}
+.content .cont-head {
+  width: 100%;
+  height: 4rem;
+  background-image: url("../img/my/back@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 4rem;
+}
+.content .cont-head .cont-user {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.37rem;
+  width: 4rem;
+  height: 2.4rem;
+  padding-left: 2.22rem;
+  background-image: url("../img/my/head@2x.png");
+  background-repeat: no-repeat;
+  background-size: 1.93rem 1.93rem;
+  background-position: 0.28rem 0.24rem;
+}
+.content .cont-head .cont-user p {
+  width: 1.78rem;
+  height: 2.4rem;
+  font-size: 0.26rem;
+  line-height: 2.4rem;
+  color: #333333;
+  text-align: center;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background-image: url("../img/my/VIOP@2x.png");
+  background-repeat: no-repeat;
+  background-size: 1.22rem 0.39rem;
+  background-position: 0.29rem 1.42rem;
+}
+.content .cont-menu {
+  width: 100%;
+  height: 2.7rem;
+  margin-top: 0.43rem;
+  margin-bottom: 0.88rem;
+}
+.content .cont-menu .cont-menu-give, .content .cont-menu .cont-menu-get, .content .cont-menu .cont-menu-remove, .content .cont-menu .cont-menu-show {
+  position: absolute;
+  width: 2rem;
+  height: 1.3rem;
+}
+.content .cont-menu .cont-menu-give {
+  top: 0;
+  left: 0.65rem;
+  background-image: url("../img/my/1@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content .cont-menu .cont-menu-get {
+  top: 0;
+  left: 2.75rem;
+  background-image: url("../img/my/2@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content .cont-menu .cont-menu-remove {
+  bottom: 0;
+  left: 0.65rem;
+  background-image: url("../img/my/3@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content .cont-menu .cont-menu-show {
+  bottom: 0;
+  left: 2.75rem;
+  background-image: url("../img/my/4@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content .cont-menu .cont-menu-all {
+  position: absolute;
+  top: 0;
+  right: 0.65rem;
+  width: 2rem;
+  height: 2.7rem;
+  background-image: url("../img/my/5@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content .cont-content {
+  width: 100%;
+}
+.content .cont-content li {
+  width: 100%;
+  padding-left: 0.66rem;
+}
+.content .cont-content li.on {
+  border-bottom: 1px solid #d4cec6;
+}
+.content .cont-content li.on a {
+  border-bottom: 0;
+}
+.content .cont-content li a {
+  display: block;
+  width: 100%;
+  height: 1.1rem;
+  font-size: 0.35rem;
+  line-height: 1.1rem;
+  color: #333333;
+  border-bottom: 1px solid #d4cec6;
+}
+.content .cont-content li a span {
+  position: absolute;
+  top: 0.29rem;
+  right: 0.66rem;
+  display: inline-block;
+  width: 0.51rem;
+  height: 0.51rem;
+  background-repeat: no-repeat;
+  background-size: 0.51rem 0.51rem;
+}
+.content .cont-content li a span.vip {
+  background-image: url("../img/my/vip@2x.png");
+}
+.content .cont-content li a span.order {
+  background-image: url("../img/my/order@2x.png");
+}
+.content .cont-content li a span.collect {
+  background-image: url("../img/my/collect@2x.png");
+}
+.content .cont-content li a span.sell {
+  background-image: url("../img/my/sell@2x.png");
+}
+.content .cont-content li a span.sale {
+  background-image: url("../img/my/sale@2x.png");
+}
+.content .cont-content li a span.pro {
+  background-image: url("../img/my/pro@2x.png");
+}
+.content .cont-content li a span.fenqi {
+  background-image: url("../img/my/fenqi@2x.png");
+}
+.content .cont-content li a span.service {
+  background-image: url("../img/my/service@2x.png");
+}
+.content .cont-content li a span.view {
+  background-image: url("../img/my/view@2x.png");
+}
+.content .cont-content li a span.set {
+  background-image: url("../img/my/set@2x.png");
+}
+
+/*# sourceMappingURL=my.css.map */

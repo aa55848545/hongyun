@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>定制-首页</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <p>红韵定制</p>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 底部栏开始 -->
+<div class="footer">
+    <a href="order-meter.html"></a>
+</div>
+<!-- 底部栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <div class="order-flow">
+        <img src="img/order/order-home/procedure.png"/>
+        <span></span>
+    </div>
+    <div class="order-enjoy">
+        <div class="enjoy"><p>定制欣赏</p></div>
+        <div class="order-enjoy-pic">
+            <div class="enjoy-pic-left">
+                <a href="javascript:;"><img src="img/order/order-home/1.png"/></a>
+            </div>
+            <div class="enjoy-pic-right">
+                <a href="javascript:;"><img src="img/order/order-home/2.png"/></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/auto-size.js"></script>
+<script src="js/order.js"></script>
+<script>
+    $(function () {
+        $(".header span").click(function () {
+            history.back();
+        });
+        $(".order-enjoy-pic").click(function () {
+            localStorage.details=0;
+            window.location="details.html";
+        });
+    });
+
+    isScrollToPageBottom();
+    watchScroll();
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>注册</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <p>登录</p>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <div class="cont-content">
+        <p>手机号</p>
+        <input type="tel" maxlength="11" placeholder="输入手机号" class="ipt-tel">
+        <button>发送验证码</button>
+        <p>验证码</p>
+        <input type="text" maxlength="6" placeholder="输入验证码" class="ipt-txt">
+        <span></span>
+    </div>
+</div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    $(function () {
+        $(".header span").click(function () {
+            history.back();
+        });
+        $(".header p").on("click",function () {
+            window.location="login.html";
+        });
+
+        var myTel=false;
+        var myTxt=false;
+
+        $(".ipt-tel").bind("input propertychange",function () {
+            var text1="";
+            text1=$(this).val();
+            if(/^1\d{10}$/.test(text1)){
+                $(this).css("color","#a31515");
+                $(".cont-content button").css("display","block");
+                myTel=true;
+                if(myTxt){
+                    $(".cont-content>span").addClass("on");
+                }
+            }else{
+                $(this).css("color","blue");
+                $(".cont-content button").css("display","none");
+                myTel=false;
+                $(".cont-content>span").removeClass("on");
+            }
+        });
+
+        $(".ipt-txt").bind("input propertychange",function () {
+            if(/^\d{6}$/.exec($(".ipt-txt").val())){
+                myTxt=true;
+                if(myTel){
+                    $(".cont-content>span").addClass("on");
+                }
+            }else{
+                myTxt=false;
+                $(".cont-content>span").removeClass("on");
+            }
+        });
+
+        var timer=null;
+        var min=60;
+        var myBtn=false;
+        $(".cont-content button").click(function () {
+            $(".ipt-txt")[0].focus();
+            if(myBtn==false){
+                myBtn=true;
+                $(".cont-content button").addClass("on");
+                $(".cont-content button").text("60s");
+                timer=setInterval(function () {
+                    if(min>0){
+                        min--;
+                        $(".cont-content button").text(min+"s");
+                    }else{
+                        $(".cont-content button").removeClass("on");
+                        $(".cont-content button").text("发送验证码");
+                        myBtn=false;
+                        clearInterval(timer);
+                    }
+                },1000);
+            }
+        });
+
+        $(".ipt-txt").on("keydown",function (e) {
+            if(e.keyCode==13){
+                $(".cont-content > span").click();
+            }
+        });
+
+        $(".cont-content > span").click(function () {
+            if($(this).hasClass("on")){
+                localStorage.tel=$(".ipt-tel").val();
+                console.log(localStorage.tel);
+                window.location="password.html";
+            }else{
+                alert("请输入正确的手机号或密码");
+            }
+        });
+    });
+</script>
+</body>
+</html>

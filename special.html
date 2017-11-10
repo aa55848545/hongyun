@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>专题</title>
+    <link rel="stylesheet" href="css/details.css">
+    <style>
+        body,div,img{
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            width: 100%;
+        }
+        .cont-img{
+            width: 100%;
+            font-size: 0;
+        }
+        .cont-img img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <em><em></em></em>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<div class="content">
+    <div class="cont-img"><img src="img/special/special2@1x.png"/></div>
+</div>
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    $(function () {
+        $(".header span").click(function () {
+            history.back();
+        });
+        $(".header>em").click(function () {
+            $(".header>em").toggleClass("on");
+        });
+    });
+</script>
+</body>
+</html>

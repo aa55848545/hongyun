@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>详情</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <em><em></em></em>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 底部栏开始 -->
+<div class="footer">
+    <a href="service.html" class="kefu"></a>
+    <a href="shoppingbag.html" class="buy"></a>
+    <a href="javascript:;" class="add"></a>
+    <a href="javascript:;" class="set"></a>
+</div>
+<!-- 底部栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <div class="cont-banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide myimg"><img src="img/details/1@1x.png"/></div>
+                <div class="swiper-slide myimg"><img src="img/details/2@1x.png"/></div>
+                <div class="swiper-slide myimg"><img src="img/details/3@1x.png"/></div>
+                <div class="swiper-slide myimg"><img src="img/details/4@1x.png"/></div>
+            </div>
+            <!-- 分页器 -->
+            <div class="swiper-pagination"></div>
+        </div><!-- .swiper-container -->
+        <div class="cont-name">
+            <img src="img/details/name@1x.png"/>
+            <img src="img/details/free@1x.png"/>
+        </div>
+    </div>
+    <div class="cont-all">
+        <img src="img/details/cont@1x.png"/>
+    </div>
+</div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    var mySwiper=new Swiper(".swiper-container",{
+        direction: "horizontal",
+        loop: true,
+        speed: 4000,
+        autoplay: 4000,
+        autoplayDisableOnInteraction: false,
+
+        //分页器
+        pagination: '.swiper-pagination',
+    });
+
+    $(function () {
+        $(".header span").click(function () {
+            if(localStorage.details=="1"){
+                window.location.href="home.html";
+            }else{
+                history.back();
+            }
+        });
+        $(".header>em").click(function () {
+            $(".header>em").toggleClass("on");
+        });
+    });
+</script>
+</body>
+</html>

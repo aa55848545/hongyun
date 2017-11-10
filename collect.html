@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>收藏</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/collect.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <p>收藏</p>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <!-- 没有收藏的时候 -->
+    <div class="cont-collect-no" style="display: none">
+        <img src="img/collect/backf@1x.png"/>
+        <div><a href="#"></a></div>
+    </div>
+
+    <!-- 有收藏的时候 -->
+    <div class="cont-collect-yes">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="collect-yes-del swiper-slide">
+                    <button type="button" class="btn-del"></button>
+                </div>
+                <div class="swiper-slide">
+                    <div class="collect-yes-img">
+                        <img src="img/collect/1@1x.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="collect-yes-del swiper-slide">
+                    <button type="button" class="btn-del"></button>
+                </div>
+                <div class="swiper-slide">
+                    <div class="collect-yes-img">
+                        <img src="img/collect/2@1x.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 主体部分结束 -->
+
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    var mySwiper=new Swiper(".swiper-container",{
+        direction: "horizontal",
+        resistanceRatio : 0,
+        slidesPerView: "auto",
+        initialSlide :1,
+    });
+
+    $(function () {
+        $(".btn-del").click(function () {
+            this.parentNode.parentNode.parentNode.remove();
+            if($(".cont-collect-yes").html()==false){
+                $(".cont-collect-no").css("display","block");
+            }
+        });
+    });
+    
+    $(".header span").click(function () {
+        history.back();
+    });
+
+    $(".content .cont-collect-yes .collect-yes-img").click(function () {
+        localStorage.details=0;
+        window.location="details.html";
+    });
+</script>
+</body>
+</html>

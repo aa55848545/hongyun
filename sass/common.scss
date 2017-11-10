@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/* 通用样式 */
+body, div, span, a, p, nav, em, ul, ol, li, img, button, input, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul, ol, li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -moz-tap-highlight-color: rgba(0,0,0,0);
+  -ms-tap-highlight-color: rgba(0,0,0,0);
+  -o-tap-highlight-color: rgba(0,0,0,0);
+  tap-highlight-color: rgba(0,0,0,0);
+  &:focus{
+    text-decoration: none;
+    background-color: transparent;
+  }
+  &:active{
+    background-color: transparent;
+  }
+}
+input, button{
+  outline: none;
+  border: 0;
+}
+body{
+  background-color: #fcf5eb;
+  overflow-x: hidden;
+  padding-bottom: 0.99rem;
+}
+
+/* 手机状态栏开始 */
+.status{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 7.5rem;
+  height: 0.4rem;
+  background-color: #fcf5eb;
+}// 手机状态栏结束
+
+/* 顶部导航栏开始 */
+.header{
+  margin-top: 0.4rem;
+  width: 7.5rem;
+  height: 0.8rem;
+  nav{
+    position: fixed;
+    top: 0.4rem;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 0.8rem;
+    text-align: center;
+    background-color: #fcf5eb;
+    button{
+      position: absolute;
+      top: -0.05rem;
+      left: 0.34rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      background: {
+        color: transparent;
+        image: url("../img/home/nav/menu.png");
+        repeat: no-repeat;
+        position: center center;
+        size: 0.39rem 0.34rem;
+      }
+    }
+    input{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 4.2rem;
+      height: 0.63rem;
+      margin-left: -2.1rem;
+      margin-top: -0.315rem;
+      text-align: center;
+      background: {
+        image: url("../img/home/nav/search.png");
+        repeat: no-repeat;
+        position: center center;
+        size: 4.2rem 0.63rem;
+        color: #fcf5eb;
+      }
+    }
+    span{
+      position: absolute;
+      right: 0.24rem;
+      top: -0.1rem;
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      background: {
+        image: url("../img/home/nav/message.png");
+        repeat: no-repeat;
+        position: center center;
+        size: 0.47rem 0.42rem;
+      }
+    }
+  }
+}// 顶部导航栏结束
+
+/* 底部栏开始 */
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  width: 7.5rem;
+  font-size: 0;
+  text-align: center;
+  background-color: #fffcf8;
+  a{
+    display: inline-block;
+    width: 1.27rem;
+    height: 0.99rem;
+    margin-right: 0.26rem;
+
+    &.footer-home{
+      background: {
+        image: url("../img/home/footer/home.png");
+        repeat: no-repeat;
+        size: 0.43rem 0.7rem;
+        position: center center;
+      }
+      &.on{
+        background-image: url("../img/home/footer/home1.png");
+      }
+    }
+    &.footer-classify{
+      background: {
+        image: url("../img/home/footer/classify.png");
+        repeat: no-repeat;
+        size: 0.48rem 0.62rem;
+        position: center center;
+      }
+      &.on{
+        background-image: url("../img/home/footer/classify1.png");
+      }
+    }
+    &.footer-custom{
+      background: {
+        image: url("../img/home/footer/custom.png");
+        repeat: no-repeat;
+        size: 0.42rem 0.7rem;
+        position: center center;
+      }
+      &.on{
+        background-image: url("../img/home/footer/custom1.png");
+      }
+    }
+    &.footer-shopping{
+      background: {
+        image: url("../img/home/footer/shopping bag.png");
+        repeat: no-repeat;
+        size: 0.64rem 0.69rem;
+        position: center center;
+      }
+      &.on{
+        background-image: url("../img/home/footer/shopping bag1.png");
+      }
+    }
+    &.footer-my{
+      background: {
+        image: url("../img/home/footer/my.png");
+        repeat: no-repeat;
+        size: 0.42rem 0.7rem;
+        position: center center;
+      }
+      &.on{
+        background-image: url("../img/home/footer/my1.png");
+      }
+    }
+
+    &.left{
+      float: left;
+    }
+    &.right{
+      float: right;
+    }
+    &.non{
+      margin-right: 0;
+    }
+  }
+}
+
+/* 左侧菜单栏开始 */
+.menu{
+  position: fixed;
+  left: -5.9rem;
+  top: 0;
+  z-index: 99;
+  width: 5.9rem;
+  height: 100%;
+  background-color: #fcf5eb;
+  padding: 1.18rem 0.6rem 0;
+  overflow: hidden;
+  .menu-user{
+    width: 3.55rem;
+    height: 2rem;
+    margin-bottom: 0.6rem;
+    .menu-user-left{
+      float: left;
+      width: 2rem;
+      height: 2rem;
+      background: {
+        image: url("../img/home/menu/head portrait.png");
+        repeat: no-repeat;
+        size: 1.61rem 1.6rem;
+        position: center center;
+      }
+    }
+    .menu-user-right{
+      float: right;
+      width: 1.55rem;
+      height: 2rem;
+      padding-top: 0.72rem;
+      text-align: center;
+      font-size: 0.26rem;
+      color: #333333;
+      img{
+        width: 1.22rem;
+        height: 0.39rem;
+      }
+    }
+  }// .menu-user
+  .menu-nav{
+    font-size: 0.32rem;
+    color: #333333;
+    li{
+      //width: 2rem;
+      height: 0.7rem;
+      line-height: 0.7rem;
+      margin-bottom: 20%;
+      padding: 0 0.4rem;
+      a{
+        color: #333333;
+      }
+      &.non{
+        margin-bottom: 0;
+      }
+    }
+  }// .menu-nav
+  .menu-btm{
+    position: absolute;
+    bottom: 0;
+    left: 0.6rem;
+    a{
+      display: inline-block;
+      width: 0.8rem;
+      height: 0.8rem;
+      font-size: 0px;
+      &.menu-btm1{
+        margin-right: 0.79rem;
+        background: {
+          image: url("../img/home/menu/settlement.png");
+          repeat: no-repeat;
+          size: 0.45rem 0.45rem;
+          position: center center;
+        }
+      }
+      &.menu-btm2{
+        margin-right: 0.79rem;
+        background: {
+          image: url("../img/home/menu/night.png");
+          repeat: no-repeat;
+          size: 0.45rem 0.45rem;
+          position: center center;
+        }
+      }
+      &.menu-btm3{
+        background: {
+          image: url("../img/home/menu/Scan code.png");
+          repeat: no-repeat;
+          size: 0.45rem 0.45rem;
+          position: center center;
+        }
+      }
+    }
+  }// .menu-btm
+}// 左侧菜单栏开始
+
+.menu-after{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    display: none;
+    width: 1.6rem;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>会员等级</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/vip.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <p>会员等级</p>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <div class="cont-head">
+        <img src="img/vip/touxiang@1x.png"/>
+        <span>近一年消费金额<br><em>￥40000</em></span>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="cont-vip1">
+                    <img src="img/vip/vip1@1x.png"/>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="cont-vip1">
+                    <img src="img/vip/vip1@1x.png"/>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="cont-vip1">
+                    <img src="img/vip/vip1@1x.png"/>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="cont-vip1">
+                    <img src="img/vip/vip1@1x.png"/>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="cont-vip1">
+                    <img src="img/vip/vip1@1x.png"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    var mySwiper=new Swiper(".swiper-container",{
+        direction: "horizontal",
+        autoplayDisableOnInteraction: false,
+
+        // 前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+
+    $(function () {
+        $(".header span").click(function () {
+            history.back();
+        });
+    });
+</script>
+</body>
+</html>

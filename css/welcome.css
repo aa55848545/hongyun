@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@import url(../css/common.css);
+.status {
+  background: transparent;
+}
+
+/* 顶部开始 */
+.header {
+  position: fixed;
+  top: 0.4rem;
+  left: 0;
+  z-index: 99;
+  margin-top: 0;
+  width: 100%;
+  height: 0.8rem;
+  text-align: center;
+  font-size: 0.36rem;
+  line-height: 0.8rem;
+  font-weight: bold;
+}
+.header span {
+  position: absolute;
+  top: 0;
+  left: 0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url("../img/order/order-home/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 0.2rem 0.36rem;
+  background-position: center center;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0rem;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-image: url("../img/welcome/back2@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content .cont-content {
+  width: 100%;
+  height: 100%;
+}
+.content .cont-content .welcome-img {
+  position: absolute;
+  top: 2.54rem;
+  left: 0.66rem;
+  width: 4.12rem;
+  height: 2.26rem;
+}
+.content .cont-content a {
+  display: inline-block;
+  position: absolute;
+}
+.content .cont-content a.cont-login {
+  top: 6.02rem;
+  left: 0.65rem;
+  width: 6.2rem;
+  height: 1rem;
+  background-image: url("../img/welcome/login@2x.png");
+  background-repeat: no-repeat;
+  background-size: 6.2rem 1rem;
+}
+.content .cont-content a.cont-register {
+  top: 7.61rem;
+  left: 0.65rem;
+  width: 6.2rem;
+  height: 1rem;
+  background-image: url("../img/welcome/register@2x.png");
+  background-repeat: no-repeat;
+  background-size: 6.2rem 1rem;
+}
+.content .cont-content a.cont-qq {
+  bottom: 0.82rem;
+  left: 2.59rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-image: url("../img/welcome/qq@2x.png");
+  background-repeat: no-repeat;
+  background-size: 0.75rem 0.75rem;
+}
+.content .cont-content a.cont-wx {
+  bottom: 0.82rem;
+  right: 2.58rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-image: url("../img/welcome/weixin1.png");
+  background-repeat: no-repeat;
+  background-size: 0.75rem 0.75rem;
+}
+.content .cont-content p {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 2.1rem;
+  width: 6.5rem;
+  height: 0.31rem;
+  background-image: url("../img/welcome/san@2x.png");
+  background-repeat: no-repeat;
+  background-size: 6.5rem 0.31rem;
+}
+
+/*# sourceMappingURL=welcome.css.map */

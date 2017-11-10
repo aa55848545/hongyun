@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>个人信息</title>
+    <link rel="stylesheet" href="css/my.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 底部栏开始 -->
+<div class="footer">
+    <a href="home.html" class="footer-home left"></a>
+    <a href="classify.html" class="footer-classify cen"></a>
+    <a href="order-home.html" class="footer-custom"></a>
+    <a href="shoppingbag.html" class="footer-shopping"></a>
+    <a href="javascript:;" class="footer-my non right on"></a>
+</div>
+<!-- 底部栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <div class="cont-head">
+        <div class="cont-user">
+            <p>十里浅秋</p>
+        </div>
+    </div>
+    <div class="cont-menu">
+        <div class="cont-menu-give"></div>
+        <div class="cont-menu-get"></div>
+        <div class="cont-menu-remove"></div>
+        <div class="cont-menu-show"></div>
+        <div class="cont-menu-all"></div>
+    </div>
+    <div class="cont-content">
+        <ul>
+            <li class="on"><a href="vip.html">会员中心<span class="vip"></span></a></li>
+            <li><a href="order-home.html">我的定制<span class="order"></span></a></li>
+            <li><a href="collect.html">我的收藏<span class="collect"></span></a></li>
+            <li><a href="javascript:;">我的售卖<span class="sell"></span></a></li>
+            <li class="on"><a href="javascript:;">我的拍卖<span class="sale"></span></a></li>
+            <li><a href="javascript:;">优惠券<span class="pro"></span></a></li>
+            <li class="on"><a href="javascript:;">信用卡分期<span class="fenqi"></span></a></li>
+            <li><a href="service.html">红韵客服<span class="service"></span></a></li>
+            <li><a href="javascript:;">意见反馈<span class="view"></span></a></li>
+            <li><a href="javascript:;">设置<span class="set"></span></a></li>
+        </ul>
+    </div>
+</div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    $(function () {
+        $(".content .cont-head .cont-user").click(function () {
+            window.location="user.html";
+        });
+    });
+</script>
+</body>
+</html>

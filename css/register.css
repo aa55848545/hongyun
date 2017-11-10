@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@import url(../css/common.css);
+.status {
+  background: transparent;
+}
+
+/* 顶部开始 */
+.header {
+  position: fixed;
+  top: 0.4rem;
+  left: 0;
+  z-index: 99;
+  margin-top: 0;
+  width: 100%;
+  height: 0.8rem;
+  text-align: center;
+  font-size: 0.36rem;
+  line-height: 0.8rem;
+  font-weight: bold;
+}
+.header span {
+  position: absolute;
+  top: 0;
+  left: 0.4rem;
+  z-index: 10;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url("../img/order/order-home/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 0.2rem 0.36rem;
+  background-position: center center;
+}
+.header p {
+  float: right;
+  text-align: right;
+  color: #a31515;
+  font-weight: normal;
+  padding-right: 0.66rem;
+}
+
+body {
+  padding: 0rem;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  background-color: transparent;
+  background-image: url("../img/register/back2@2x.png");
+  background-repeat: no-repeat;
+  background-size: 7.5rem 13.34rem;
+}
+.content .cont-content {
+  width: 100%;
+  height: 100%;
+  padding: 3.56rem 0.64rem 0rem;
+  color: #a31515;
+}
+.content .cont-content p {
+  font-size: 0.32rem;
+  margin-bottom: 0.17rem;
+}
+.content .cont-content input {
+  width: 100%;
+  height: 1.08rem;
+  font-size: 0.5rem;
+  color: #a31515;
+  margin-bottom: 0.5rem;
+  background: transparent;
+  border-bottom: 1px solid #e2b4ae;
+}
+.content .cont-content input::-webkit-input-placeholder {
+  color: #a31515;
+}
+.content .cont-content input:-ms-input-placeholder {
+  color: #a31515;
+}
+.content .cont-content input::placeholder {
+  color: #a31515;
+}
+.content .cont-content input::-moz-placeholder {
+  color: #a31515;
+}
+.content .cont-content button {
+  position: absolute;
+  right: 0.64rem;
+  top: 4.42rem;
+  width: 1.36rem;
+  height: 0.5rem;
+  display: none;
+  font-size: 0.24rem;
+  color: #fcf5eb;
+  background-image: url("../img/register/juxing2@2x.png");
+  background-repeat: no-repeat;
+  background-size: 1.36rem 0.5rem;
+}
+.content .cont-content button.on {
+  background-image: url("../img/register/juxingcopy@2x.png");
+}
+.content .cont-content > span {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background-image: url("../img/register/qian@2x.png");
+  background-repeat: no-repeat;
+  background-size: 0.9rem 0.9rem;
+}
+.content .cont-content > span.on {
+  background-image: url("../img/register/shen@2x.png");
+}
+
+/*# sourceMappingURL=register.css.map */

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@import url(../css/common.css);
+body {
+  padding: 0;
+  background-image: url("../img/vip/back@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.status {
+  background-color: transparent;
+}
+
+/* 顶部开始 */
+.header {
+  position: fixed;
+  top: 0.4rem;
+  left: 0;
+  z-index: 99;
+  margin-top: 0;
+  width: 100%;
+  height: 0.8rem;
+  text-align: center;
+  font-size: 0.36rem;
+  line-height: 0.8rem;
+  font-weight: bold;
+}
+.header span {
+  position: absolute;
+  top: 0;
+  left: 0.4rem;
+  z-index: 10;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url("../img/order/order-home/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 0.2rem 0.36rem;
+  background-position: center center;
+}
+
+.content {
+  width: 100%;
+  margin-top: 1.2rem;
+}
+.content .cont-head {
+  width: 100%;
+  margin-bottom: 1.3rem;
+}
+.content .cont-head img {
+  width: 1.93rem;
+  height: 1.93rem;
+  margin-left: 0.65rem;
+  vertical-align: middle;
+}
+.content .cont-head span {
+  display: inline-block;
+  font-size: 0.3rem;
+  color: #333333;
+  vertical-align: middle;
+}
+.content .cont-head span em {
+  font-size: 0.36rem;
+  color: #a31515;
+  font-style: normal;
+  font-weight: bold;
+}
+.content .cont-vip1 {
+  width: 100%;
+  text-align: center;
+}
+.content .cont-vip1 img {
+  width: 5.43rem;
+}
+
+.swiper-button-next {
+  position: absolute;
+  right: 0.33rem;
+  top: 50%;
+  display: inline-block;
+  z-index: 10;
+  width: 0.8rem;
+  height: 0.8rem;
+  cursor: pointer;
+  margin-top: -0.4rem;
+  background-image: url("../img/vip/right@1x.png");
+  background-repeat: no-repeat;
+  background-size: 0.16rem 0.28rem;
+  background-position: center center;
+}
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  left: 0.33rem;
+  top: 50%;
+  display: inline-block;
+  z-index: 10;
+  width: 0.8rem;
+  height: 0.8rem;
+  cursor: pointer;
+  margin-top: -0.4rem;
+  background-image: url("../img/vip/left@1x.png");
+  background-repeat: no-repeat;
+  background-size: 0.16rem 0.28rem;
+  background-position: center center;
+}
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=vip.css.map */

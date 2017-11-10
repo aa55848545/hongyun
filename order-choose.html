@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>定制-选择</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/orderchoose.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <p>选料定款</p>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 底部栏开始 -->
+<div class="footer">
+    <a href="order-balance.html"></a>
+</div>
+<!-- 底部栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <div class="cont-font"><p>选料定款</p></div>
+    <div class="cont-choose">
+        <span class="cont-choose1 on"><span></span></span>
+        <span class="cont-choose2"><span></span></span>
+        <span class="cont-choose3"><span></span></span>
+    </div>
+    <div class="choose-menu">
+        <div class="choose-menu-lining">
+            <h1>面料</h1>
+            <p><span>真丝</span><span>桑波缎</span><span class="non">素绉缎</span></p>
+            <p><span>杭罗</span><span>双宫绸</span><span class="non">古香缎</span></p>
+            <p><span>丝绒</span><span class="on">香云纱</span><span class="non">织绵缎</span></p>
+            <p><span>棉麻</span><span>桑蚕丝</span><span class="non">柞蚕丝</span></p>
+        </div>
+        <div class="choose-menu-lining choose-menu-color">
+            <h1>面料</h1>
+            <p>红色系</p>
+            <p>
+                <em class="left">勃艮第酒红<em></em></em>
+                <em class="right">锈红<em></em></em>
+            </p>
+            <p>
+                <em class="left">勃艮第酒红<em></em></em>
+                <em class="right">锈红<em></em></em>
+            </p>
+            <p>
+                <em class="left">勃艮第酒红<em></em></em>
+                <em class="right">锈红<em></em></em>
+            </p>
+            <p>
+                <em class="left">勃艮第酒红<em></em></em>
+                <em class="right">锈红<em></em></em>
+            </p>
+        </div>
+    </div>
+    <div class="choose-preview">
+        <span class="ques"></span>
+        <div class="cont-font"><p>效果预览</p></div>
+        <div class="cloth-pic">
+            <img src="img/order/order-choose/cloth@1x.png"/>
+        </div>
+        <p>长款月牙秀</p>
+        <p>香云纱群芳桔梗苏绣</p>
+        <p>中式复古连襟旗袍</p>
+    </div>
+</div>
+<!-- 主体部分结束 -->
+
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/auto-size.js"></script>
+<!--<script src="js/orderchoose.js"></script>-->
+<script>
+    $(function () {
+        $(".header span").click(function () {
+            history.back();
+        });
+
+        $(".cont-choose>span").click(function () {
+            $(".cont-choose>span").removeClass("on");
+            $(this).toggleClass("on");
+            $(".content .choose-menu .choose-menu-lining span").removeClass("on");
+        });
+
+        $(".content .choose-menu .choose-menu-lining span").click(function () {
+            $(".content .choose-menu .choose-menu-lining span").removeClass("on");
+            $(this).addClass("on");
+        });
+
+        $(".content .choose-menu .choose-menu-lining.choose-menu-color p em").click(function () {
+            $(".content .choose-menu .choose-menu-lining.choose-menu-color p em").removeClass("on");
+            $(this).addClass("on");
+        });
+    });
+</script>
+</body>
+</html>

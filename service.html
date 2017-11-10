@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>客服</title>
+    <link rel="stylesheet" href="css/service.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <p>小雅</p>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content" id="content">
+    <div class="cont-produce">
+        <img src="img/service/produce@1x.png"/>
+    </div>
+    <div class="cont-message-serv">
+        <div class="ser-head"></div>
+        <div class="ser-font first"></div>
+    </div>
+    <div class="er-g"></div>
+</div>
+<!-- 主体部分结束 -->
+
+<!-- 键盘部分开始 -->
+<div class="footer">
+    <input type="text" id="ipt">
+    <button type="submit" id="btn">发送</button>
+</div>
+<!-- 键盘部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    $(function () {
+        $(".header span").click(function () {
+            history.back();
+        });
+
+        $(".content .cont-produce img").on("click",function () {
+            localStorage.details=0;
+            window.location="details.html";
+        });
+    });
+
+    var er_name = '小雅';//机器人名字
+    var er_hello = '美好的一天从遇到您开始，客服顾问小雅正在为您服务！';//打招呼
+    var er_key = '787af310c4104a4699112483718107f3';//填写你的 API KEY
+
+    $(document).on('keydown', '#ipt', function (e) {
+        if (e.which == 13) {
+            $('#btn').click();
+        }
+    });
+
+    $(document).on('click', '#btn', function () {
+        var a = $('.er-g'), b = $('#ipt'), c = $('#ipt').val(), d = $('#content');//.er-g聊天框最底部，#ipt输入框，#content聊天窗口
+        a.before('<div class="cont-message-user"><div class="user-head"></div><div class="user-font">'+ c +'</div></div>');
+        window.scrollTo(0,d.height());
+        b.val('');
+        $.getJSON('http://www.tuling123.com/openapi/api?key=' + er_key + '&info=' + c, function (data) {
+            a.before('<div class="cont-message-serv"><div class="ser-head"></div><div class="ser-font">' + data.text + '</div></div>');
+            window.scrollTo(0,d.height());
+        });
+    });
+</script>
+</body>
+</html>

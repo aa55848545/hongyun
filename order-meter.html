@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>定制-测量</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/ordermeter.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+    <p>量体度身</p>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 底部栏开始 -->
+<div class="footer">
+    <a href="order-choose.html"></a>
+</div>
+<!-- 底部栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <div class="order-flow">
+        <img src="img/order/order-meter/picture.png"/>
+        <span></span>
+    </div>
+    <div class="order-enjoy">
+        <div class="enjoy"><p>尺寸填写</p></div>
+        <div class="enjoy-size">
+            <ul>
+                <li><a href="javascript:;">
+                    <span class="left">身高</span>
+                    <span class="right">去绑定</span>
+                </a></li>
+                <li><a href="javascript:;">
+                    <span class="left">体重</span>
+                    <span class="right">去绑定</span>
+                </a></li>
+                <li><a href="javascript:;">
+                    <span class="left">胸围</span>
+                    <span class="right">去绑定</span>
+                </a></li>
+                <li><a href="javascript:;">
+                    <span class="left">腰围</span>
+                    <span class="right">去绑定</span>
+                </a></li>
+                <li><a href="javascript:;" class="non">
+                    <span class="left">臀围</span>
+                    <span class="right">去绑定</span>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    $(function () {
+        $(".header span").click(function () {
+            history.back();
+        });
+        $(".enjoy-size a").on("click",function(){
+            var size;
+            size=prompt();
+            this.children[1].innerHTML=size;
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import "../css/common.css";
+
+.status{
+  background: transparent;
+}
+
+/* 顶部开始 */
+.header{
+  position: fixed;
+  top: 0.4rem;
+  left: 0;
+  z-index: 99;
+  margin-top: 0;
+  width: 100%;
+  height: 0.8rem;
+  text-align: center;
+  font-size: 0.36rem;
+  line-height: 0.8rem;
+  font-weight: bold;
+  //background-color: #fcf5eb;
+  span{
+    position: absolute;
+    top: 0;
+    left: 0.4rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: {
+      image: url("../img/order/order-home/arrow.png");
+      repeat: no-repeat;
+      size: 0.2rem 0.36rem;
+      position: center center;
+    }
+  }
+}// 顶部结束
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  padding: 0rem;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  background: {
+    color: transparent;
+    image: url("../img/welcome/back2@2x.png");
+    repeat: no-repeat;
+    size: 100% 100%;
+  }
+  .cont-content{
+    width: 100%;
+    height: 100%;
+    .welcome-img{
+      position: absolute;
+      top: 2.54rem;
+      left: 0.66rem;
+      width: 4.12rem;
+      height: 2.26rem;
+    }
+    a{
+      display: inline-block;
+      position: absolute;
+      &.cont-login{
+        top: 6.02rem;
+        left: 0.65rem;
+        width: 6.2rem;
+        height: 1rem;
+        background: {
+          image: url("../img/welcome/login@2x.png");
+          repeat: no-repeat;
+          size: 6.2rem 1rem;
+        }
+      }
+      &.cont-register{
+        top: 7.61rem;
+        left: 0.65rem;
+        width: 6.2rem;
+        height: 1rem;
+        background: {
+          image: url("../img/welcome/register@2x.png");
+          repeat: no-repeat;
+          size: 6.2rem 1rem;
+        }
+      }
+      &.cont-qq{
+        bottom: 0.82rem;
+        left: 2.59rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        background: {
+          image: url("../img/welcome/qq@2x.png");
+          repeat: no-repeat;
+          size: 0.75rem 0.75rem;
+        }
+      }
+      &.cont-wx{
+        bottom: 0.82rem;
+        right: 2.58rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        background: {
+          image: url("../img/welcome/weixin1.png");
+          repeat: no-repeat;
+          size: 0.75rem 0.75rem;
+        }
+      }
+    }
+    p{
+      position: absolute;
+      left: 0.5rem;
+      bottom: 2.1rem;
+      width: 6.5rem;
+      height: 0.31rem;
+      background: {
+        image: url("../img/welcome/san@2x.png");
+        repeat: no-repeat;
+        size: 6.5rem 0.31rem;
+      }
+    }
+  }
+}

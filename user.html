@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>个人信息</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
+<!-- 手机状态栏开始 -->
+<div class="status"></div>
+<!-- 手机状态栏结束 -->
+
+<!-- 顶部导航栏开始 -->
+<div class="header">
+    <span></span>
+</div>
+<!-- 顶部导航栏结束 -->
+
+<!-- 主体部分开始 -->
+<div class="content">
+    <h1>个人信息</h1>
+    <div class="user-img">
+        <img src="img/user/touxiang@1x.png"/>
+        <span></span>
+    </div>
+    <div class="user-details">
+        <ul>
+            <li><a href="#">
+                <span class="left">昵称</span>
+                <span class="right">十里浅秋</span>
+            </a></li>
+            <li><a href="#">
+                <span class="left">性别</span>
+                <span class="right">女</span>
+            </a></li>
+            <li><a href="#">
+                <span class="left">生日</span>
+                <span class="right">1992.11.21</span>
+            </a></li>
+            <li><a href="#">
+                <span class="left">电话</span>
+                <span class="right">去绑定</span>
+            </a></li>
+            <li><a href="#" class="non">
+                <span class="left">收货地址</span>
+                <span class="right">去绑定</span>
+            </a></li>
+        </ul>
+    </div>
+</div>
+<div class="cont-qh">切换账号<span></span></div>
+<!-- 主体部分结束 -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/auto-size.js"></script>
+<script>
+    $(function () {
+        $(".header span").click(function () {
+            history.back();
+        });
+        
+        $(".cont-qh").on("click",function () {
+            window.location="welcome.html";
+        });
+    });
+</script>
+</body>
+</html>

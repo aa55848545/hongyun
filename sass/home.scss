@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@import "../css/common.css";
+
+/* swiper样式修改 */
+.swiper-pagination-bullet{
+  width: 0.12rem;
+  height: 0.12rem;
+  background: {
+    image: url("../img/home/banner/circle.png");
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  }
+}
+.swiper-pagination-bullet-active{
+  background: {
+    image: url("../img/home/banner/circle choose.png");
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  }
+}// swiper样式修改
+
+/* 主体部分开始 */
+.content{
+  width: 100%;
+  .cont-banner{
+    width: 100%;
+    //height: 6.25rem;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }// .cont-banner
+
+  .cont-new{
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+    div{
+      display: inline-block;
+      width: 1.3rem;
+      height: 1.5rem;
+      margin: 0 0.19rem;
+      img{
+        width: auto;
+        height: 100%;
+      }
+    }
+  }// .cont-new
+
+  .cont-free{
+    margin: 0.58rem 0.5rem 0.72rem;
+    font-size: 0;
+    padding: 0.17rem;
+    background: {
+      image: url("../img/home/new/rentangle.png");
+      repeat: no-repeat;
+      size: 100% 100%;
+    }
+    img{
+      width: 1.98rem;
+      height: 1.84rem;
+      margin-right: 0.1rem;
+      &.non{
+        margin-right: 0px;
+      }
+    }
+  }// .cont-free
+
+  .cont-bpic{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }// .cont-bpic
+
+  .cont-like{
+    padding: 0 0.5rem;
+    width: 2.7rem;
+    height: 1px;
+    margin: 0 auto 0.34rem;
+    background-color: #333333;
+    p{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -0.85rem;
+      margin-top: -0.155rem;
+      padding:0 0.13rem;
+      font-size: 0.24rem;
+      color: #333333;
+      background-color: #fcf5eb;
+    }
+  }// .cont-like
+
+  .cont-spic{
+    width: 6.5rem;
+    margin: 0 auto 0.45rem;
+    overflow: hidden;
+    .cont-spic-left{
+      float: left;
+    }
+    .cont-spic-right{
+      float: right;
+    }
+    .cont-spic-image{
+      width: 3.2rem;
+      height: 5.15rem;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

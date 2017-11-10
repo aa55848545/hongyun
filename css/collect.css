@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@import url(../css/common.css);
+/* 顶部开始 */
+.header {
+  position: fixed;
+  top: 0.4rem;
+  left: 0;
+  z-index: 99;
+  margin-top: 0;
+  width: 100%;
+  height: 0.8rem;
+  text-align: center;
+  font-size: 0.36rem;
+  line-height: 0.8rem;
+  font-weight: bold;
+  background-color: #fcf5eb;
+}
+.header span {
+  position: absolute;
+  top: 0;
+  left: 0.4rem;
+  z-index: 9;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url("../img/order/order-home/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 0.2rem 0.36rem;
+  background-position: center center;
+}
+
+.content {
+  width: 100%;
+  margin-top: 1.55rem;
+}
+.content .cont-collect-no {
+  width: 100%;
+  text-align: center;
+}
+.content .cont-collect-no img {
+  width: 1.32rem;
+  height: 6rem;
+  margin-top: 1.3rem;
+  margin-bottom: 1.65rem;
+}
+.content .cont-collect-no div {
+  width: 100%;
+  height: 0.9rem;
+  background-image: url("../img/collect/icon@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-height: 0.9rem;
+}
+.content .cont-collect-no div a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+.content .cont-collect-yes {
+  width: 100%;
+}
+.content .cont-collect-yes .collect-yes-img {
+  width: 7.5rem;
+  font-size: 0;
+  margin-bottom: 0.2rem;
+}
+.content .cont-collect-yes .collect-yes-img img {
+  width: 7.5rem;
+}
+.content .cont-collect-yes .collect-yes-del {
+  width: auto;
+}
+.content .cont-collect-yes .collect-yes-del button {
+  width: 0.94rem;
+  height: 2rem;
+  background-image: url("../img/collect/del.png");
+  background-repeat: no-repeat;
+  background-size: 0.94rem 2rem;
+}
+
+/*# sourceMappingURL=collect.css.map */
